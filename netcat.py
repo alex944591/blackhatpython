@@ -100,6 +100,7 @@ class NetCat:
 
 
 if __name__ == "__main__":
+    buffer = ''
     parser = argparse.ArgumentParser(
         description='BHL Net Tool',
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -118,11 +119,6 @@ if __name__ == "__main__":
     parser.add_argument('-t', '--target', default='0.0.0.0', help='specified target IP')
     parser.add_argument('-u', '--upload', help='name of a file')
     args = parser.parse_args()
-    print(args)
-    if args.listen:
-        buffer = ''
-    #else:
-        #buffer = sys.stdin.read()
     nc = NetCat(args, buffer.encode())
     nc.run()
 
