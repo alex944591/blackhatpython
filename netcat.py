@@ -115,7 +115,7 @@ if __name__ == "__main__":
     parser.add_argument('-e', '--execute', help='execute specified command')
     parser.add_argument('-l', '--listen', action='store_true', help='listen')
     parser.add_argument('-p', '--port', type=int, default=5555, help='specified port')
-    parser.add_argument('-t', '--target', type=ip_address, default='0.0.0.0', help='specified target IP')
+    parser.add_argument('-t', '--target', default='0.0.0.0', help='specified target IP')
     parser.add_argument('-u', '--upload', help='name of a file')
     args = parser.parse_args()
     print(args)
@@ -123,4 +123,6 @@ if __name__ == "__main__":
         buffer = ''
     else:
         buffer = sys.stdin.read()
+    nc = NetCat(args, buffer.encode())
+    nc.run()
 
