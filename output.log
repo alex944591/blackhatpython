@@ -1,0 +1,11 @@
+2022-11-24 16:34 INFO [*] Listening on 0.0.0.0:9998
+2022-11-24 16:34 INFO [*] Accepted connection from 127.0.0.1:19047
+2022-11-24 16:34 INFO [*] Received: GET / HTTP/1.1
+Host: google.com
+
+
+2022-11-24 16:35 INFO [*] Accepted connection from 127.0.0.1:19197
+2022-11-24 16:35 INFO [*] Received: GET / HTTP/1.1
+Host: google.com
+
+
